@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:backend": "lerna run start:dev --scope=@reservation/backend",
+    "start:frontend": "lerna run dev --scope=@reservation/frontend",
+    "start:admin": "lerna run dev --scope=@reservation/admin"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
+}
