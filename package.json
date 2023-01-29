@@ -6,7 +6,9 @@
   ],
   "scripts": {
     "start:backend": "lerna run start:dev --scope=@reservation/backend",
-    "start:frontend": "lerna run dev --scope=@reservation/frontend"
+    "start:frontend": "lerna run dev --scope=@reservation/frontend",
+    "deploy:dev": "lerna run build --scope=@reservation/frontend && lerna run build --scope=@reservation/backend && lerna run start:prod --scope=@reservation/backend",
+    "deploy": "npm ci && lerna run build --scope=@reservation/frontend && lerna run build --scope=@reservation/backend && lerna run start:prod --scope=@reservation/backend"
   },
   "devDependencies": {
     "lerna": "^6.0.1"
